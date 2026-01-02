@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pandas
+pandahouse
+clickhouse-connect
+mlflow
+scikit-learn
+pydantic_settings
+boto3
+botocore
+dill
