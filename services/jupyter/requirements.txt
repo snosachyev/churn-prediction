@@ -1,0 +1,10 @@
+pandas
+pandahouse
+clickhouse-connect
+jupyterlab
+matplotlib
+seaborn
+mlflow
+boto3
+botocore
+dill
