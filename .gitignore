@@ -4,6 +4,9 @@
 .ipynb_*
 *log*
 
+__pycache__
+*.pyc
+
 # Jupyter checkpoints
 .ipynb_checkpoints/
 
