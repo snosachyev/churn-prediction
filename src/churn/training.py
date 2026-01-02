@@ -9,8 +9,9 @@ import pandahouse
 from sklearn.model_selection import train_test_split
 
 
-from churn.config import get_clickhouse_config, pandahouse_connection
-from churn import build_features, FEATURE_COLUMNS
+from churn import build_features
+
+from churn.domain.entities.schema import UserFeaturesSchema
 from churn.infrastructure.clickhouse.training_repository import ClickHouseTrainingRepository
 
 
@@ -18,7 +19,7 @@ from churn.infrastructure.clickhouse.training_repository import ClickHouseTraini
 def train_model(df: pd.DataFrame):
     from churn import create_model
     X = build_features(df)
-    X = X[FEATURE_COLUMNS]
+    X = X[list(UserFeaturesSchema.feature_fields)]
     y = df['churn']
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
