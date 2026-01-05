@@ -26,32 +26,32 @@ markdown
 
 ## 📂 Структура проекта
 
-.
-├─ infra/
-│ ├─ airflow/ # DAG-и Airflow
-│ └─ clickhouse/ # Инициализация БД и таблиц
-│
-├─ services/ # Dockerfile сервисов
-│ ├─ api/
-│ ├─ airflow/
-│ ├─ jupyter/
-│ └─ mlflow/
-│
-├─ src/
-│ ├─ api/ # FastAPI
-│ ├─ churn/ # ML-домен
-│ │ ├─ domain/ # Entities + interfaces
-│ │ ├─ application/ # Use-cases
-│ │ ├─ infrastructure/ # ClickHouse / MLflow
-│ │ ├─ features.py
-│ │ ├─ training.py
-│ │ └─ model.py
-│ └─ core/ # Конфиг и DI
-│
-├─ tests/ # Unit-тесты
-├─ docker-compose.yml
-├─ README.md
-└─ .env.example
+    .
+    ├── infra
+    │   ├── airflow
+    │   └── clickhouse
+    │
+    ├── services
+    │   ├── api
+    │   ├── airflow
+    │   ├── jupyter
+    │   └── mlflow
+    │
+    ├── src
+    │   ├── api
+    │   ├── churn
+    │   │   ├── domain
+    │   │   ├── application
+    │   │   ├── infrastructure
+    │   │   ├── features.py
+    │   │   ├── training.py
+    │   │   └── model.py
+    │   └── core
+    │
+    ├── tests
+    ├── docker-compose.yml
+    ├── README.md
+    └── .env.example
 
 ---
 
